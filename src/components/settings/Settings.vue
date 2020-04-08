@@ -42,6 +42,9 @@
           transition-prev="jump-up"
           transition-next="jump-up"
         >
+          <q-tab-panel name="appearance">
+            <brand-color-picker />
+          </q-tab-panel>
           <q-tab-panel name="networking">
             <div class="row">
               <q-input
@@ -61,7 +64,12 @@
 </template>
 
 <script>
+import BrandColorPicker from '../settings/BrandColorPicker'
+
 export default {
+  components: {
+    BrandColorPicker
+  },
   props: {
     value: {
       type: Object
